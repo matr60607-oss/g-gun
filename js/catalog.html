@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Каталог — G-gun</title>
+    <meta name="description" content="Каталог демонстрационных коллекционных моделей и снаряжения G-gun.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/app.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+</head>
+<body data-page="catalog">
+
+    <header id="site-header"></header>
+
+    <main class="page-container">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span>/</span>
+            <span>Каталог</span>
+        </div>
+
+        <section class="page-intro">
+            <span class="eyebrow">G-GUN / ALL PRODUCTS</span>
+
+            <h1 class="page-title">
+                Каталог<span class="accent">.</span>
+            </h1>
+
+            <p>
+                Исследуй коллекцию G-gun. Используй поиск, выбирай категории
+                и сортируй товары, чтобы быстрее находить нужные предметы.
+            </p>
+        </section>
+
+        <section aria-label="Поиск и фильтрация">
+            <div class="catalog-toolbar">
+                <input
+                    class="input"
+                    id="catalog-search"
+                    type="search"
+                    placeholder="Поиск по названию..."
+                    aria-label="Поиск по названию товара"
+                >
+
+                <select
+                    class="select"
+                    id="catalog-sort"
+                    aria-label="Сортировка товаров"
+                >
+                    <option value="default">По умолчанию</option>
+                    <option value="price-asc">Сначала дешевле</option>
+                    <option value="price-desc">Сначала дороже</option>
+                    <option value="name">По названию</option>
+                </select>
+            </div>
+
+            <div class="filter-list" id="category-filters">
+                <button class="filter-button active" data-category="all">
+                    Все товары
+                </button>
+
+                <button class="filter-button" data-category="models">
+                    Коллекционные модели
+                </button>
+
+                <button class="filter-button" data-category="gear">
+                    Снаряжение
+                </button>
+
+                <button class="filter-button" data-category="accessories">
+                    Аксессуары
+                </button>
+            </div>
+
+            <p class="catalog-result-count" id="catalog-result-count"></p>
+
+            <div class="product-grid" id="catalog-products"></div>
+        </section>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+</body>
+</html>
